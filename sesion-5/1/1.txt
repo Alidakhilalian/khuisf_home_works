@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int x1 = Convert.ToInt32(textBox1.Text);
+            int x2 = Convert.ToInt32(textBox2.Text);
+            int y1 = Convert.ToInt32(textBox3.Text);
+            int y2 = Convert.ToInt32(textBox4.Text);
+            double r1 = Math.Pow(x2 - x1, 2);
+            double r2 = Math.Pow(y2 - y1, 2);
+            double r3 = Math.Sqrt(r1 + r2);
+            MessageBox.Show(r3.ToString());
+        }
+    }
+}
